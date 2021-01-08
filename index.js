@@ -8,45 +8,86 @@ const questions = inquirer
     {
       type: "input",
       message: "What is the title of your project?",
-      name: "Title",
+      name: "title",
     },
     {
       type: "input",
       message: "Give me a description of your project?",
-      name: "Description",
+      name: "description",
     },
     {
       type: "input",
       message: "What are the installation instructions?",
-      name: "Installation",
+      name: "installation",
     },
     {
       type: "input",
       message: "What is the usage information?",
-      name: "Usage",
+      name: "usage",
     },
     {
       type: "input",
       message: "What are the contribution guidelines?",
-      name: "Contributions",
+      name: "contributions",
     },
     {
       type: "input",
       message: "What are your test instructions?",
-      name: "Test",
+      name: "test",
     },
   ])
+
+  // TODO: Create a function to write README file
   .then((response) => {
     console.log(response);
+    const readMeInfo = `
+# ${response.title}
+
+## Table of Contents
+
+[Description](#About)
+
+[Installation](#Installation)
+
+[Usage](#Usage)
+
+[Test Instructions](#Test)
+
+[Contributing](#Contributing)
+
+[Licenses](#Licenses)
+
+# About
+${response.description}
+## Installation
+${response.installation}
+## Usage
+${response.usage}
+## Test Instructions
+${response.test}
+
+
+## Contributing
+${response.contributions}
+
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/) 
+
+    `;
+    fs.writeFile("genReadMe.md", readMeInfo, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("The shit worked homie");
+      }
+    });
   });
-
-
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
 
 // // TODO: Create a function to initialize app
 // function init() {}
 
-// // Function call to initialize app
+// // // Function call to initialize app
 // init();
