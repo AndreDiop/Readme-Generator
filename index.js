@@ -60,52 +60,68 @@ const questions = [
     ],
   },
 ];
+
+const generateReadMe = ({
+  title,
+  description,
+  installation,
+  usage,
+  contributions,
+  test,
+  email,
+  github,
+  license,
+}) => {
+  const readMeInfo = `
+# ${title}
+          
+ ## Table of Contents
+          
+[Description](#About)
+          
+[Installation](#Installation)
+          
+[Usage](#Usage)
+          
+[Test Instructions](#Test)
+          
+[Contributing](#Contributing)
+          
+[Questions](#Questions)
+          
+[Licenses](#Licenses)
+          
+# About
+${description}
+## Installation
+${installation}
+## Usage
+${usage}
+## Test Instructions
+${test}
+          
+          
+## Contributing
+${contributions}
+          
+## Questions
+You can find me on [GitHub](https://www.github.com/${github}) 
+You can reach me by email also at ${email}
+## License
+This project is covered under the following 
+licenses: ${license}
+        `;
+  return readMeInfo;
+};
+
 function init() {
   console.log("Let the games begin!");
   inquirer.prompt(questions).then((response) => {
     console.log(response);
 
-    const readMeInfo = `
-# ${response.title}
-      
-## Table of Contents
-      
-[Description](#About)
-      
-[Installation](#Installation)
-      
-[Usage](#Usage)
-      
-[Test Instructions](#Test)
-      
-[Contributing](#Contributing)
-      
-[Questions](#Questions)
-      
-[Licenses](#Licenses)
-      
-# About
-${response.description}
-## Installation
-${response.installation}
-## Usage
-${response.usage}
-## Test Instructions
-${response.test}
-      
-      
-## Contributing
-${response.contributions}
-      
-## Questions
-You can find me on [GitHub](https://www.github.com/${response.github}) 
-You can reach me by email also at ${response.email}
-## License
-This project is covered under the following 
-licenses: ${response.license}
-    `;
+    const readmeTemplate = generateReadMe(response);
     // Create a function to write README file
-    fs.writeFile("genReadMe.md", readMeInfo, (err) => {
+    fs.writeFile("genReadMe.md", readmeTemplate, (err) => {
       if (err) {
         console.log(err);
       } else {
