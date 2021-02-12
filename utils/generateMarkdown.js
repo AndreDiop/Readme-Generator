@@ -10,8 +10,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+
 function renderLicenseLink(license) {
   if (license === "MIT") {
     return "[MIT](https://opensource.org/licenses/MIT)";
@@ -63,7 +62,7 @@ function renderLicenseSection(license) {
     return "";
   }
 }
-// TODO: Create a function to generate markdown for README
+
 const generateReadMe = ({
   title,
   description,
@@ -79,7 +78,7 @@ const generateReadMe = ({
 # ${title}
 ${renderLicenseBadge(license)}
           
- ##Table of Contents for ${title}
+ ## Table of Contents for ${title}
           
 [Description](#About)
           
