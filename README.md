@@ -2,7 +2,7 @@
 # ReadMe Generator
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
           
- ##Table of Contents for ReadMe Generator
+ ## Table of Contents for ReadMe Generator
           
 [Description](#About)
           
@@ -20,11 +20,36 @@
           
 # About
 This app builds an intuitive and completely dynamic readme file for your next project. No more having to remember Markdown syntax all you have to do is answer questions about your project and the code does the rest.
+
+Of all of my applications that I have build, this one gets the most use from me. All of my readme's were build using this app and it truly helps solve the problem of writing an informative readme. At its core it is a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer).
+
+
 ## Installation
-In your bash terminal, navigate to the folder containing the 'index.js' file. Once in that directory, return 'node index.js.
+1. Users will navigate to the [github Repository](https://github.com/AndreDiop/Tradecraft-Messenger) to clone the repository.
+
+2. To clone and run this application, you will need Git and required NPM dependancies installed on your computer. Inside of your command line editor do the following:
+
+ ```bash
+git clone https://github.com/AndreDiop/Readme-Generator.git
+
+npm install
+```
+3.Start the server instance on your local machine
+ ```bash
+
+npm start
+```
+
+
+
+
 ## Usage
+
 You would want to use this app if you wanted a way to have a beautifully formatted readme file for your project with out the hassle of having to right it all out yourself. a better readme can make or break your project, so just let this script do the heavy lifting so you can focus on your project and not writing the readme.
+
 ## Test Instructions
+
+
 The packages used on this script are from NPM. Full documentation can be found on www.npmjs.com. There are no unexpected behavior in the code that I know of.
           
           
