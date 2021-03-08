@@ -25,7 +25,7 @@ Of all of my applications that I have build, this one gets the most use from me.
 
 
 ## Installation
-1. Users will navigate to the [github Repository](https://github.com/AndreDiop/Tradecraft-Messenger) to clone the repository.
+1. Users will navigate to the [github Repository](https://github.com/AndreDiop/Readme-Generator) to clone the repository.
 
 2. To clone and run this application, you will need Git and required NPM dependancies installed on your computer. Inside of your command line editor do the following:
 
