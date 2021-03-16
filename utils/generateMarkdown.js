@@ -69,7 +69,7 @@ const generateReadMe = ({
   installation,
   usage,
   contributions,
-  test,
+  tech,
   email,
   github,
   license,
@@ -100,8 +100,8 @@ ${description}
 ${installation}
 ## Usage
 ${usage}
-## Test Instructions
-${test}
+## Technology Used
+${tech}
           
           
 ## Contributing

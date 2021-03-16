@@ -29,8 +29,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "What are your test instructions?",
-    name: "test",
+    message: "What technology was used?",
+    name: "tech",
   },
   {
     type: "input",
